@@ -1,1 +1,56 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Support My Dream</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #count {
+      font-size: 40px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Support My Football Dream ⚽</h1>
+
+<p>
+I want to pursue football seriously and prove myself.
+Sign this petition if you support my journey.
+</p>
+
+<div id="count">0</div>
+
+<button onclick="signPetition()">
+Sign Petition
+</button>
+
+<script>
+let count = localStorage.getItem("count") || 0;
+document.getElementById("count").innerText = count;
+
+function signPetition() {
+  count++;
+  localStorage.setItem("count", count);
+  document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
